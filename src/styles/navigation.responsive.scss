@@ -1,0 +1,42 @@
+@import 'config.scss';
+
+@media screen and (min-width: 992px) {
+    .main-navigation {
+        .navbar {
+            max-width: 1470px;
+            align-items: center;
+
+            .nav-btn {
+                display: none;
+            }
+
+            .nav-links {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                padding-top: 0;
+                width: 40rem;
+
+                .nav-link {
+                    text-align: center;
+                }
+
+                .nav-link::after {
+                    content: '';
+                    width: 0;
+                    height: .05rem;
+                    background-color: $secondary-color;
+                    display: block;
+                    margin: auto;
+                    transition: $main-transition;
+                }
+                .nav-link:hover {
+                    transform: translateX(0);
+                }
+
+                .nav-link:hover::after {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

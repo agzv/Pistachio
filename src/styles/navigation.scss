@@ -1,0 +1,45 @@
+@import 'config.scss';
+
+.main-navigation {
+    background: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90vw;
+        margin: 0 auto;
+        //color: $secondary-color;
+        color: set-text-color($primary-color);
+        padding-top: 1rem;
+        
+        .nav-btn {
+            // color: $secondary-color;
+            color: set-text-color($primary-color);
+            display: grid;
+            justify-items: flex-end;
+            
+            .icon {
+                font-size: 1.3rem;
+            }
+        }
+
+        .nav-links {
+            padding-top: 1rem;
+            
+            .nav-link {
+                display: block;
+                padding: .5rem 0;
+                letter-spacing: $main-spacing;
+                // color: $secondary-color;
+                color: set-text-color($primary-color);
+                transition: $main-transition;
+            }
+
+            .nav-link:hover {
+                transform: translateX(2rem) scale(1.2);
+            }
+        }
+    }
+}

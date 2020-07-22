@@ -1,1 +1,26 @@
 @import '../config.scss';
+
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/bg-2.jpg') center/cover no-repeat;
+    display: grid;
+    place-items: center;
+
+    .banner {
+        // border: 1px solid white;
+        width: 90vw;
+        color: $secondary-color;
+        font-size: .9rem;
+        text-align: center;
+
+        h1 {
+            letter-spacing: $main-spacing;
+        }
+
+        h3 {
+            margin-top: .4rem;
+            font-size: .8rem;
+            letter-spacing: 1.1px;
+        }
+    }
+}

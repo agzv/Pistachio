@@ -2,6 +2,18 @@ $primary-color: #000;
 $secondary-color: #fff;
 $main-transition: all 0.5s ease-in-out;
 $font-stack: 'Josefin Sans', sans-serif;
+$main-spacing: 1.5px;
+
+// Set text color based on background
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return $primary-color;
+    }
+
+    @else {
+        @return $secondary-color;
+    }
+}
 
 * {
     margin: 0;
@@ -10,4 +22,23 @@ $font-stack: 'Josefin Sans', sans-serif;
     font-family: $font-stack;
     list-style: none;
     text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: .3rem 5rem;
+    color: $primary-color;
+    margin-top: 2rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: $main-transition;
+}
+
+.center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
 }
