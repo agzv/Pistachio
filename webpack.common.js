@@ -2,7 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './src/js/index.js'
+        main: './src/js/index.js',
+        recipes: './src/js/recipes.js',
     },
     module: {
         rules: [
@@ -25,11 +26,13 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/templates/index.html'
+            template: './src/templates/index.html',
+            chunks: ['main']
         }),
         new HtmlWebpackPlugin({
             filename: 'recipes.html',
-            template: './src/templates/recipes.html'
+            template: './src/templates/recipes.html',
+            chunks: ['recipes']
         })
     ]
 }

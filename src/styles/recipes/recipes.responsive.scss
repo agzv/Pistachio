@@ -1,0 +1,9 @@
+@import '../config';
+
+@media screen and (min-width: 992px) {
+    .recipes {
+        .recipes-container {
+            background: url('../../assets/recipes-bg.jpg') center/cover no-repeat;
+        }
+    }
+}

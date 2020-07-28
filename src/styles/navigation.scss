@@ -1,45 +1,73 @@
 @import 'config.scss';
 
-.main-navigation {
-    background: rgba(255, 255, 255, 0.1);
+.navbar {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    
-    .navbar {
+    background: rgba(255, 255, 255, .2);
+    z-index: 2;
+    display: grid;
+    place-items: center;
+
+    .nav-header {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        width: 90vw;
-        margin: 0 auto;
-        //color: $secondary-color;
-        color: set-text-color($primary-color);
-        padding-top: 1rem;
-        
-        .nav-btn {
-            // color: $secondary-color;
-            color: set-text-color($primary-color);
-            display: grid;
-            justify-items: flex-end;
-            
-            .icon {
-                font-size: 1.3rem;
-            }
+        padding: 1rem 0;
+        color: $secondary-color;
+
+        .nav-toggle {
+            background: transparent;
+            border: none;
+            font-size: 1.1rem;
+            color: $secondary-color;
+            cursor: pointer;
+            outline: none;
+            transition: $main-transition;
+            justify-self: end;
         }
 
-        .nav-links {
-            padding-top: 1rem;
-            
-            .nav-link {
-                display: block;
-                padding: .5rem 0;
-                letter-spacing: $main-spacing;
-                // color: $secondary-color;
-                color: set-text-color($primary-color);
-                transition: $main-transition;
-            }
-
-            .nav-link:hover {
-                transform: translateX(2rem) scale(1.2);
-            }
+        .nav-toggle:hover {
+            transform: scale(1.2);
         }
     }
+
+    .nav-links {
+        overflow: hidden;
+        position: absolute;
+        transform: translateX(-150%);
+        transition: $main-transition;
+        width: 100%;
+        height: 10rem;
+        border-radius: 0 0 1rem 1rem;
+
+        .nav-link {
+            display: block;
+            padding: 1rem 1rem;
+            letter-spacing: 2px;
+            transition: $main-transition;
+            color: $secondary-color;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .nav-link:hover {
+            font-size: 1.5rem;
+        }
+    }
+
+    .change-links-container {
+        background-color: $primary-color;
+    }
+
+    .show-links {
+        transform: translateX(-5%);
+    }
+
 }
+
+.change-color {
+    background-color: $primary-color;
+}
+
+@import './navigation.responsive.scss';

@@ -9,7 +9,7 @@
     .cards-center {
         display: grid;
         column-gap: 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(337.5px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 
         .card {
             display: grid;
@@ -48,3 +48,5 @@
     align-items: center;
     justify-items: center;
 }
+
+@import './features.responsive.scss';

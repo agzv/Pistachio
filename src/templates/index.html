@@ -6,41 +6,38 @@
     <title>Pistachio</title>
 </head>
 <body>
-    <nav class="main-navigation">
-        <div class="navbar">
-            <h2>Pistachio</h2>
-            <a href="#" class="nav-btn">
-                <i class="fas fa-bars icon"></i>
-            </a>
-            <ul class="nav-links">
+    <nav class="navbar">
+        <div class="center">
+            <div class="nav-header">
+                <h2>Pistachio</h2>
+                <button type="button" class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars icon"></i>
+                </button>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
                 <li>
-                    <a href="#" class="nav-link">Main</a>
+                    <a href="#header" class="nav-link scroll-link">Main</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">About</a>
+                    <a href="#about" class="nav-link scroll-link">About</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">Features</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">Login</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">Sign Up</a>
+                    <a href="#features" class="nav-link scroll-link">Features</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="banner">
             <h1>Welcome to the Pistachio</h1>
             <h3>The world best place to find your favourite recipes</h3>
-            <button type="button" class="btn header-btn">Try it now</button>
+            <a href="recipes.html" class="btn header-btn">Try it now</a>
         </div>
     </header>
 
-    <section class="about center">
+    <section class="about center" id="about">
         <!-- <div class="content center"> -->
             <div class="about-info">
                 <h1>Have you ever wanted to keep your <span>the most</span> favourite recipes in one place?</h1>
@@ -74,7 +71,7 @@
             </div>
     </section>
 
-    <section class="features center">
+    <section class="features center" id="features">
         <div class="cards-center">
             <!-- single card -->
             <article class="card">
