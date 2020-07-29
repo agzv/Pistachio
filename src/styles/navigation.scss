@@ -1,6 +1,6 @@
 @import 'config.scss';
 
-.navbar {
+%navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -63,8 +63,86 @@
     .show-links {
         transform: translateX(-5%);
     }
-
 }
+
+.navbar-main {
+    @extend %navbar;
+}
+
+.navbar-recipes {
+    @extend %navbar;
+    background: #2c3e50;
+    color: $secondary-color;
+
+    .nav-links {
+        background-color: #2c3e50;
+    }
+}
+
+// .navbar {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     background: rgba(255, 255, 255, .2);
+//     z-index: 2;
+//     display: grid;
+//     place-items: center;
+
+//     .nav-header {
+//         display: grid;
+//         grid-template-columns: repeat(2, 1fr);
+//         padding: 1rem 0;
+//         color: $secondary-color;
+
+//         .nav-toggle {
+//             background: transparent;
+//             border: none;
+//             font-size: 1.1rem;
+//             color: $secondary-color;
+//             cursor: pointer;
+//             outline: none;
+//             transition: $main-transition;
+//             justify-self: end;
+//         }
+
+//         .nav-toggle:hover {
+//             transform: scale(1.2);
+//         }
+//     }
+
+//     .nav-links {
+//         overflow: hidden;
+//         position: absolute;
+//         transform: translateX(-150%);
+//         transition: $main-transition;
+//         width: 100%;
+//         height: 10rem;
+//         border-radius: 0 0 1rem 1rem;
+
+//         .nav-link {
+//             display: block;
+//             padding: 1rem 1rem;
+//             letter-spacing: 2px;
+//             transition: $main-transition;
+//             color: $secondary-color;
+//             cursor: pointer;
+//             font-size: 1rem;
+//         }
+
+//         .nav-link:hover {
+//             font-size: 1.5rem;
+//         }
+//     }
+
+//     .change-links-container {
+//         background-color: $primary-color;
+//     }
+
+//     .show-links {
+//         transform: translateX(-5%);
+//     }
+// }
 
 .change-color {
     background-color: $primary-color;

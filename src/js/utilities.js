@@ -1,7 +1,7 @@
 export class ToggleNavbar {
     constructor() {
-        this.menuButton = document.getElementById('nav-toggle');
-        this.navLinks = document.getElementById('nav-links');
+        this.menuButton = document.querySelector('.nav-toggle');
+        this.navLinks = document.querySelector('.nav-links');
         this.scrollLinks = document.querySelectorAll('.scroll-link');
     }
 
@@ -73,7 +73,7 @@ export class ShowSlides {
 
 export class ChangeNavbar {
     constructor() {
-        this.navbar = document.querySelector('.navbar');
+        this.navbar = document.querySelector('.navbar-main');
         this.navLinks = document.querySelector('.nav-links');
     }
 
@@ -81,7 +81,6 @@ export class ChangeNavbar {
         window.addEventListener('scroll', () => {
             const scrollHeight = window.pageYOffset;
             const mainHeight = document.getElementById('header').getBoundingClientRect().height;
-            //const navLinks = document.querySelector('.nav-links');
 
             if (scrollHeight >= mainHeight - 57) {
                 this.navbar.classList.add('change-color');

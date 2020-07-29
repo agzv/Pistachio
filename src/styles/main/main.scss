@@ -1,4 +1,5 @@
 @import '../config.scss';
+@import '../navigation.scss';
 
 .header {
     height: 100vh;
@@ -7,7 +8,6 @@
     place-items: center;
 
     .banner {
-        // border: 1px solid white;
         width: 90vw;
         color: $secondary-color;
         font-size: .9rem;
@@ -21,6 +21,20 @@
             margin-top: .8rem;
             font-size: .8rem;
             letter-spacing: 1.5px;
+        }
+
+        .header-btn {
+            background-color: rgba(255, 255, 255, 0.7);
+            margin-top: 2rem;
+            padding: .5rem 4rem;
+            letter-spacing: $main-spacing;
+            font-size: 1.2rem;
+
+        }
+
+        .header-btn:hover {
+            transform: scale(1.1);
+            background-color: $secondary-color;
         }
     }
 }

@@ -5,9 +5,10 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
-import { MealsDB } from './MealsDB';
-import { UI } from './UI';
-import { ToggleNavbar } from './utilities';
+import { MealsDB } from '../js/MealsDB';
+import { UI } from '../js/UI';
+import { ToggleNavbar } from '../js/utilities';
+
 
 (() => {
     const recipesContainer = document.querySelector('.recipes-container');
@@ -21,8 +22,7 @@ import { ToggleNavbar } from './utilities';
     const toggleNavbar = new ToggleNavbar();
 
     toggleNavbar.toggleMenu();
-
-
+    
     optionsContainer.addEventListener('click', event => {
         if (event.target.classList.contains('option')) {
             ui.showPreloader();
@@ -49,7 +49,7 @@ import { ToggleNavbar } from './utilities';
     submitBtn.addEventListener('click', e => {
         e.preventDefault();
         if (userInput.value === '') {
-            ui.showFeedback('Please inter correct recpe name!');
+            ui.showFeedback('Please enter correct recpe name!');
         } else {
             ui.showPreloader();
             mealsDB.fetchMeals(userInput.value).then(data => ui.getRecipes(data)).catch(err => ui.showFeedback('There is no such a recipe'));

@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         main: './src/js/index.js',
-        recipes: './src/js/recipes.js',
+        recipes: ["@babel/polyfill", './src/js/recipes.js']
     },
     module: {
         rules: [
